@@ -14,6 +14,8 @@ $txt-light: $off-white;
 $txt2-dark: $slate;
 $txt2-light: $mid-gray;
 
+$std-pad: 20px;
+
 @mixin dark-scheme {
     background-color: $bg-dark;
     color: $txt-light;
@@ -36,13 +38,13 @@ $txt2-light: $mid-gray;
     }
 }
 
-section {
-    padding: 20px;
+body {
+    margin: 0;
 }
 
-#header {
-    @include header-footer-scheme;
-
+section {
+    padding: $std-pad;
+    text-align: center;
 }
 
 h1 {
@@ -50,6 +52,26 @@ h1 {
     background: linear-gradient(to right, $hot-pink, $illini-orange);
     background-clip: text;
     display: inline-block;
+    font-size: 4rem;
+}
+
+#header {
+    @include header-footer-scheme;
+    padding: $std-pad;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+#nav-bar {
+    display: flex;
+    gap: $std-pad;
+}
+
+#head-link {
+    font-size: 1.5rem;
 }
 
 #section0 {
@@ -66,4 +88,6 @@ h1 {
 
 #footer {
     @include header-footer-scheme;
+    padding: $std-pad;
+    text-align: center;
 }
