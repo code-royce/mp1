@@ -1,1 +1,69 @@
-/* Your SCSS here. */
+/* Color Palette */
+$charcoal: #1E1F24;
+$slate: #2C2E35;
+$off-white: #F4F4F6;
+$mid-gray: #8A8D96;
+$hot-pink: #FF2E88;
+$illini-orange: #FF5F05;
+
+/* Color Scheme */
+$bg-dark: $slate;
+$bg-light: $off-white;
+$txt-dark: $charcoal;
+$txt-light: $off-white;
+$txt2-dark: $slate;
+$txt2-light: $mid-gray;
+
+@mixin dark-scheme {
+    background-color: $bg-dark;
+    color: $txt-light;
+}
+
+@mixin light-scheme {
+    background-color: $bg-light;
+    color: $txt-dark;
+}
+
+@mixin header-footer-scheme {
+    background-color: $charcoal;  /* Darkest color on page */
+    color: $txt-light;
+    a {
+        color: $txt-light;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+section {
+    padding: 20px;
+}
+
+#header {
+    @include header-footer-scheme;
+
+}
+
+h1 {
+    color: transparent;
+    background: linear-gradient(to right, $hot-pink, $illini-orange);
+    background-clip: text;
+    display: inline-block;
+}
+
+#section0 {
+    @include dark-scheme;
+}
+
+#section1 {
+    @include light-scheme;
+}
+
+#section2 {
+    @include dark-scheme;
+}
+
+#footer {
+    @include header-footer-scheme;
+}
