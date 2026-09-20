@@ -14,7 +14,13 @@ $txt-light: $off-white;
 $txt2-dark: $slate;
 $txt2-light: $mid-gray;
 
+/* Font Family */
+$font-std: 'Space Grotesk', system-ui, sans-serif;
+$font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
 $std-pad: 20px;
+$header-height: 71px;  /* Per Dev Tools */
+$reduction: 0.75;  /* Header shrink ratio */
 
 @mixin dark-scheme {
     background-color: $bg-dark;
@@ -38,40 +44,59 @@ $std-pad: 20px;
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    font-family: $font-std;
     margin: 0;
 }
 
 section {
     padding: $std-pad;
+    scroll-margin-top: $reduction * $header-height;
     text-align: center;
 }
 
 h1 {
-    color: transparent;
     background: linear-gradient(to right, $hot-pink, $illini-orange);
     background-clip: text;
+    color: transparent;
     display: inline-block;
     font-size: 4rem;
 }
 
 #header {
     @include header-footer-scheme;
-    padding: $std-pad;
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    padding: $std-pad;
     position: sticky;
     top: 0;
+    transition: 0.4s;
+}
+
+#header.reduced {
+    font-size: $reduction * 1rem;
+    padding: ($reduction * $std-pad) $std-pad;
 }
 
 #nav-bar {
     display: flex;
+    font-family: $font-mono;
     gap: $std-pad;
+
+    a.highlighted {
+        color: $hot-pink;
+        font-weight: bold;
+    }
 }
 
 #head-link {
-    font-size: 1.5rem;
+    font-family: $font-mono;
+    font-size: 1.5em;
 }
 
 #section0 {
@@ -88,6 +113,7 @@ h1 {
 
 #footer {
     @include header-footer-scheme;
+    font-family: $font-mono;
     padding: $std-pad;
     text-align: center;
 }
