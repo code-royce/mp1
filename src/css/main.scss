@@ -67,6 +67,10 @@ section:nth-of-type(even) {
     @include light-scheme;
 }
 
+img {
+    max-width: 100%;
+}
+
 h1 {
     background: linear-gradient(to right, $hot-pink, $illini-orange);
     background-clip: text;
@@ -76,8 +80,63 @@ h1 {
 }
 
 .content {
-
+    margin: 0 auto;
+    max-width: 1050px;
 }
+
+.modal {
+    background-color: rgba($charcoal, 0.85);
+    display: none;
+    inset: 0;
+    position: fixed;
+    z-index: 10;
+}
+
+.modal.open {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.content-modal {
+    background-color: $bg-light;
+    border-radius: 8px;
+    color: $txt-dark;
+    max-width: 600px;
+    padding: 2rem;
+    text-align: left;
+}
+
+.slide {
+    cursor: pointer;
+    display: none;
+
+    img {
+        height: 320px;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+.slide.in-focus {
+    display: block;
+}
+
+.carousel {
+    position: relative;
+}
+
+.arrow {
+    background: none;
+    border: none;
+    color: $txt-light;
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 
 #header {
     @include header-footer-scheme;
@@ -127,8 +186,8 @@ h1 {
         justify-content:space-evenly;
     }
 
-    .card {
-
+    .column {
+        flex: 1;
     }
 
     .post-it {
@@ -145,7 +204,7 @@ h1 {
 }
 
 #unplugged {
-    @include light-scheme;
+
 }
 
 #contact {
@@ -157,4 +216,12 @@ h1 {
     font-family: $font-mono;
     padding: $std-pad;
     text-align: center;
+}
+
+#prev {
+    left: 0;
+}
+
+#next {
+    right: 0;
 }
