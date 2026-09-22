@@ -203,6 +203,35 @@ h1 {
 
 }
 
+#static-image {
+    align-items: flex-end;
+    background: linear-gradient(rgba($off-white, 0.35), rgba($off-white, 0.75)), url('../assets/kitty.jpg') center / cover fixed;
+    color: $txt-dark;
+    display: flex;
+    min-height: 400px;
+
+    .content {
+        width: 100%;
+    }
+
+    .quote {
+        font-size: 1.5rem;
+        font-style: italic;
+    }
+
+    .quote::before {
+        content: '"';
+        font-size: 3rem;
+        font-style: normal;
+        line-height: 0;
+        vertical-align: -0.35em;
+    }
+
+    .source {
+        color: $txt2-dark;
+    }
+}
+
 #unplugged {
 
 }
