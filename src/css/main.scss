@@ -59,12 +59,24 @@ section {
     text-align: center;
 }
 
+section:nth-of-type(odd) {
+    @include dark-scheme;
+}
+
+section:nth-of-type(even) {
+    @include light-scheme;
+}
+
 h1 {
     background: linear-gradient(to right, $hot-pink, $illini-orange);
     background-clip: text;
     color: transparent;
     display: inline-block;
     font-size: 4rem;
+}
+
+.content {
+
 }
 
 #header {
@@ -99,16 +111,45 @@ h1 {
     font-size: 1.5em;
 }
 
-#section0 {
-    @include dark-scheme;
+#home {
+    .avatar {
+        border-radius: 50%;
+        display: block;
+        height: 300px;
+        margin: 0 auto;
+    }
 }
 
-#section1 {
+#about {
+    .three-columns {
+        display: flex;
+        gap: $std-pad;
+        justify-content:space-evenly;
+    }
+
+    .card {
+
+    }
+
+    .post-it {
+        height: 180px;
+        width: 180px;
+        object-fit: cover;
+        box-shadow: 2px 4px 10px rgba($charcoal, 0.3);
+        transform: rotate(-2deg);
+    }
+}
+
+#projects {
+
+}
+
+#unplugged {
     @include light-scheme;
 }
 
-#section2 {
-    @include dark-scheme;
+#contact {
+
 }
 
 #footer {
