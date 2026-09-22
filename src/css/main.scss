@@ -112,8 +112,7 @@ h1 {
     display: none;
 
     img {
-        height: 320px;
-        object-fit: cover;
+        height: auto;
         width: 100%;
     }
 }
@@ -123,6 +122,7 @@ h1 {
 }
 
 .carousel {
+    padding: 0 ($std-pad * 3);
     position: relative;
 }
 
