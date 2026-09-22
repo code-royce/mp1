@@ -10,7 +10,7 @@ function highlightNavLink() {
     const headerHeight = header.offsetHeight;
 
     // Ensure bottom of the page highlights last section.
-    if (windowHeight + scroll >= totalHeight) {
+    if (windowHeight + scroll >= totalHeight - 2) {
         pickCurrentSection(sections[sections.length - 1].getAttribute('id'));
         return;
     }
