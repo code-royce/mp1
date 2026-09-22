@@ -345,15 +345,13 @@ h1 {
     right: 0;
 }
 
-@media (max-width: 900px) {
-    #static-image {
-        background-attachment: scroll;
-        min-height: 300px;
-    }
-}
-
 @media (max-width: 700px) {
     #about .three-columns {
         flex-direction: column;
+    }
+
+    #static-image {
+        background-attachment: scroll;
+        min-height: 300px;
     }
 }
