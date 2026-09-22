@@ -234,7 +234,28 @@ h1 {
 }
 
 #unplugged {
+    video {
+        border-radius: 8px;
+        display: block;
+        margin: $std-pad auto;
+        max-width: 700px;
+        width: 100%;
+    }
 
+    .favorites {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $std-pad;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+    }
+
+    .favorites li {
+        @include light-scheme;
+        border-radius: 999px;
+        padding: 8px 16px;
+    }
 }
 
 #contact {
