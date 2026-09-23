@@ -284,16 +284,19 @@ h1 {
     video {
         border-radius: 8px;
         display: block;
+        height: 450px;
         margin: $std-pad auto;
         max-width: 700px;
+        object-fit: cover;
+        object-position: center 45%;
         width: 100%;
     }
 
     .favorites {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
         gap: $std-pad;
-        justify-content: center;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
         list-style: none;
         padding: 0;
     }
