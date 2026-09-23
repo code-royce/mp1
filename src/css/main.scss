@@ -44,6 +44,15 @@ $reduction: 0.75;  /* Header shrink ratio */
     }
 }
 
+@keyframes name-transition {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -176,6 +185,14 @@ h1 {
     transform: translateY(-50%);
 }
 
+#prev {
+    left: 0;
+}
+
+#next {
+    right: 0;
+}
+
 
 #header {
     @include header-footer-scheme;
@@ -208,15 +225,6 @@ h1 {
 #head-link {
     font-family: $font-mono;
     font-size: 1.5em;
-}
-
-@keyframes name-transition {
-    from {
-        clip-path: inset(0 100% 0 0);
-    }
-    to {
-        clip-path: inset(0 0 0 0);
-    }
 }
 
 #home {
@@ -335,14 +343,6 @@ h1 {
     p {
         margin: 0;
     }
-}
-
-#prev {
-    left: 0;
-}
-
-#next {
-    right: 0;
 }
 
 @media (max-width: 700px) {
