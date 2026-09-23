@@ -50,7 +50,7 @@ slides.forEach((slide) => {
 });
 
 modals.forEach((modal) => {
-    modal.addEventListener('click', () => {
+    modal.querySelector('.close').addEventListener('click', () => {
         modal.classList.remove('open');
     });
 });
